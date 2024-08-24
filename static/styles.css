@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Light gray background similar to ChatGPT */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    
+    
+}
+
+h1 {
+    color: #111;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.language-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lang-btn {
+    background-color: #007bff; /* Blue button similar to ChatGPT */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.lang-btn:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+.lang-btn.selected {
+    background-color: #0056b3; /* Darker blue for selected state */
+}
+
+button {
+    background-color: #007bff; /* Blue button similar to ChatGPT */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+button:disabled {
+    background-color: #6c757d; /* Gray for disabled state */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow for better focus indication */
+}
+
+.result-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px; /* Increased margin for better spacing */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Bottom Input Area Styles */
+.input-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.textarea-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#bottom-text-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn i {
+    font-size: 24px;
+    color: #007bff; /* Blue for icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #bottom-text-input {
+        width: 100%;
+    }
+}
+
+

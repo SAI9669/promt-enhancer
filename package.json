@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.16.0",
+    "express": "^4.19.2"
+  },
+  "scripts": {
+    "start": "concurrently \"python app.py\" \"node prompt.js\""
+  }
+}

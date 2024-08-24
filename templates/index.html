@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prompt Enhancer</h1>
+        <form id="form" method="POST" enctype="multipart/form-data">
+            <div id="microphone-input" class="form-group">
+                <label>Language:</label>
+                <div class="language-buttons">
+                    <button type="button" class="lang-btn" data-lang="English">English</button>
+                    <button type="button" class="lang-btn" data-lang="Telugu">Telugu</button>
+                    <button type="button" class="lang-btn" data-lang="Tamil">Tamil</button>
+                    <button type="button" class="lang-btn" data-lang="German">German</button>
+                    <button type="button" class="lang-btn" data-lang="Chinese">Chinese</button>
+                    <button type="button" class="lang-btn" data-lang="Hindi">Hindi</button>
+                    <button type="button" class="lang-btn" data-lang="Korean">Korean</button>
+                    <button type="button" class="lang-btn" data-lang="Spanish">Spanish</button>
+                </div>
+                <input type="hidden" id="language" name="language">
+            </div>
+            <div class="input-area">
+                <div class="textarea-container">
+                    <textarea id="bottom-text-input" placeholder="Enter text or use microphone..." rows="1" style="border-radius: 25%;" ></textarea>
+                    <div class="button-group">
+                        <button type="button" id="start-recording" class="btn-control">
+                            Start Recording
+                        </button>
+                        <button type="button" id="stop-recording" class="btn-control" disabled>
+                            Stop Recording
+                        </button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div id="loading" style="display: none;">Loading...</div>
+        <div id="original-text" class="result-box"></div>
+        <div id="translated-text" class="result-box"></div>
+        <div id="corrected-text" class="result-box"></div>
+        <div id="enhanced-prompt" class="result-box"></div> 
+    </div>
+
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
